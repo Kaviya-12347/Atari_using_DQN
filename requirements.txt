@@ -1,0 +1,8 @@
+gym==0.21.0
+numpy
+torch
+torchvision
+opencv-python
+tensorboard
+gym[atari]
+atari-py
