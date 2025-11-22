@@ -27,6 +27,7 @@ The implementation is fully modular and organized for easy extension (e.g., Doub
 ✔️ TensorBoard logging for reward/loss monitoring
 
 ✔️ Model checkpointing every N frames
+
 🧠 DQN Architecture
 Input: 4 stacked grayscale frames (84x84)
 
@@ -40,31 +41,13 @@ FC1: 512 units → ReLU
 FC2: #actions → Q-values
 ────────────────────────────────────────
 Output: Q-values for each action
-▶️ Training the Agent
-
-Run training with:
-
-python train_dqn.py --env BreakoutNoFrameskip-v4 \
-                    --total-frames 2000000 \
-                    --save-dir models/
 
 
-Common arguments:
-
-Argument	Meaning	Default
---env	Atari environment	BreakoutNoFrameskip-v4
---total-frames	Training steps	1,000,000
---batch-size	Mini-batch size	32
---lr	Learning rate	1e-4
---gamma	Discount factor	0.99
---target-update	Target sync freq	1000 frames
---eps-*	Exploration schedule	1.0 → 0.01
 📊 Logging & Visualization
 
 Training logs are saved using TensorBoard:
 
 tensorboard --logdir runs/
-
 
 You can visualize:
 
